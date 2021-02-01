@@ -44,7 +44,9 @@ def user():
         temp = doc.getvalue()
         with open(html_string_file, 'w', encoding='utf8') as html_write:
             html_write.write(temp)
-        pdf = pdfkit.from_string(temp, False)
+        config = pdfkit.configuration(wkhtmltopdf='./bin/wkhtmltopdf')
+
+        pdf = pdfkit.from_string(temp, False, configuration=config)
         response = make_response(pdf)
         response.headers["Content-Type"] = "application/pdf"
         response.headers["Content-Disposition"] = "inline; filename=output.pdf"
