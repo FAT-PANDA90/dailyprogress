@@ -1,0 +1,61 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: arial;
+}
+.box1
+{
+	width: 500px;
+
+}
+p
+{
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+}
+.rating
+{
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 10px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	background: linear-gradient(to right, #f00, #ff0, #0f0);
+}
+.rating input
+{
+	display: none;
+
+}
+.rating label
+{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	background: #fff;
+	color: #000;
+	font-size: 20px;
+	border-right: 1px solid #000;
+}
+.rating input[type="radio"]:hover ~ label
+{
+	background: transparent;
+
+}
+.rating input[type="radio"]:checked ~ label
+{
+	background: transparent;
+
+}
